@@ -4,7 +4,6 @@ body{
 .title{
   color: lightgrey;
   text-align: center;
-  background-image: url("img/bokeh.jpg");
   margin: -8px 0px 0px 0px;
   font-family: Abel;
   border-width: 1px;
@@ -19,6 +18,7 @@ body{
   height: 40px;
   background-color: #3c32a8;
   text-align:center;
+  margin: 0px 200px 0px 200px
 }
 .button{
   color:lavender;
@@ -30,25 +30,24 @@ body{
   outline: none;
   cursor:pointer;
 }
-.text{
-  color: white;
-  font-size: 20px;
-  text-indent :4em;
+.vertical{ 
+  border-left: 1px solid lavender; 
+  height: 40px; 
+  position:absolute; 
+  left: 50%;
+  #margin: -40px 0px 0px -5px;
+} 
+table, th, td {
+  border: 1px solid lightgrey;
+  padding: 5px;
+  text-align: left;
 }
-.caption{
-  color: grey;
-  text-align: center;
-  font-size: 50px;
-  margin: 20px 0px 15px 0px;
+table{
+  margin: 20px 0px 10px 0px;
+  width: 5px;
+  border-collapse: collapse;
 }
-.line{
-  color: white;
-  border: solid;
-  border-width: 0.5px;
-  width: 800px;
-  margin: auto;
-  text-align: center;
+th,td{
+  color: lightgrey;
 }
-.normal{
-  color:white;
-}
+
