@@ -13,30 +13,29 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
-.buttonbar{
+.buttonbar, .button{
   color: lavender;
-  height: 40px;
-  background-color: #3c32a8;
-  text-align:center;
-  margin: 0px 200px 0px 200px
+}
+.buttonbar{
+  height: 60px;
+  background-color: #353c57;
+  text-align:right;
+  margin: 0px 250px 0px 250px;
 }
 .button{
-  color:lavender;
   background-color: transparent;
-  border:none;
-  padding: 9px;
+  padding: 18px 60px 18px 60px;
   font-family: "Alike Angular";
   font-size: 20px;
   outline: none;
-  cursor:pointer;
+  cursor: pointer;
+  margin: 0px 0px 0px -5px;
+  border: solid 0.5px lavender;
 }
-.vertical{ 
-  border-left: 1px solid lavender; 
-  height: 40px; 
-  position:absolute; 
-  left: 50%;
-  #margin: -40px 0px 0px -5px;
-} 
+.button:hover{
+  background-color: #586185;
+}
+
 table, th, td {
   border: 1px solid lightgrey;
   padding: 5px;
@@ -49,5 +48,13 @@ table{
 }
 th,td{
   color: lightgrey;
+}
+.timer{
+  padding: 18px 196px 18px 196px;
+  background: #586185;
+  cursor: default;
+}
+.timer:hover{
+  background: #586185;
 }
 
