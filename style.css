@@ -1,11 +1,14 @@
 body{
   background-color: #1F1F1F;
 }  
+h1{
+  color: lightgray;
+  font-family: Abel;
+}
 .title{
-  color: lightgrey;
   text-align: center;
   margin: -8px 0px 0px 0px;
-  font-family: Abel;
+  
   border-width: 1px;
   font-size: 50px;
   font-style: italic;
@@ -18,12 +21,10 @@ body{
 }
 .buttonbar{
   height: 60px;
-  background-color: #353c57;
-  text-align:right;
-  margin: 0px 250px 0px 250px;
+  text-align:center;
 }
 .button{
-  background-color: transparent;
+  background-color: #353c57;
   padding: 18px 60px 18px 60px;
   font-family: "Alike Angular";
   font-size: 20px;
@@ -40,6 +41,7 @@ table, th, td {
   border: 1px solid lightgrey;
   padding: 5px;
   text-align: left;
+  font-size: 15px;
 }
 table{
   margin: 20px 0px 10px 0px;
@@ -50,11 +52,16 @@ th,td{
   color: lightgrey;
 }
 .timer{
-  padding: 18px 196px 18px 196px;
+  padding: 18px 156px 18px 156px;
   background: #586185;
   cursor: default;
 }
 .timer:hover{
   background: #586185;
 }
-
+.date{
+  width: 375px;
+}
+.location{
+  width: 110px;
+}
