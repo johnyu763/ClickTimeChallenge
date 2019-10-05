@@ -1,0 +1,54 @@
+body{
+  background-color: #1F1F1F;
+}  
+.title{
+  color: lightgrey;
+  text-align: center;
+  background-image: url("img/bokeh.jpg");
+  margin: -8px 0px 0px 0px;
+  font-family: Abel;
+  border-width: 1px;
+  font-size: 50px;
+  font-style: italic;
+  padding: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.buttonbar{
+  color: lavender;
+  height: 40px;
+  background-color: #3c32a8;
+  text-align:center;
+}
+.button{
+  color:lavender;
+  background-color: transparent;
+  border:none;
+  padding: 9px;
+  font-family: "Alike Angular";
+  font-size: 20px;
+  outline: none;
+  cursor:pointer;
+}
+.text{
+  color: white;
+  font-size: 20px;
+  text-indent :4em;
+}
+.caption{
+  color: grey;
+  text-align: center;
+  font-size: 50px;
+  margin: 20px 0px 15px 0px;
+}
+.line{
+  color: white;
+  border: solid;
+  border-width: 0.5px;
+  width: 800px;
+  margin: auto;
+  text-align: center;
+}
+.normal{
+  color:white;
+}
