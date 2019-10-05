@@ -6,18 +6,23 @@
 </head>
 <body>
   <h1 class="title"> The Race Around the World  </h1>
+  <h1> Stopwatch </h1>
   <div class="buttonbar">
-    <button onclick="startStopWatch()" class="button timer">Time</button>
+    <button onclick="startStopWatch()" class="button timer">00:00:00:00</button>
     <button onclick="startStopWatch()" class="startWatch button">Start</button>
-    <button onclick="pauseStopWatch()" class="pauseWatch button">Pause</button>
+    <button onclick="pauseStopWatch()" class="pauseWatch button">Stop</button>
     <button onclick="resetStopWatch()" class="pauseWatch button">Reset</button>
   </div>
-
+  <h1>History Table</h1>
   <table style="width:100%">
   <tr>
-    <th>Start Time</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
+    <th class="date">Start Time</th>
+    <th class="location">Start Latitude</th>
+    <th class="location">Start Longitude</th>
+    <th class="date">Stop Time</th>
+    <th class="location">Stop Latitude</th>
+    <th class="location">Stop Longitude</th>
+    <th>Elapsed Time</th>
   </tr>
   </table>
   <script type="application/javascript" src="script.js"></script>
