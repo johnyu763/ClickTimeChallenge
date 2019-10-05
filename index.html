@@ -7,9 +7,19 @@
 <body>
   <h1 class="title"> The Race Around the World  </h1>
   <div class="buttonbar">
-    <button onclick="" class="button">Start Stopwatch</button>
+    <button onclick="startStopWatch()" class="startWatch button">Start</button>
+    <p class = "vertical"></p> 
+    <button onclick="pauseStopWatch()" class="pauseWatch button">Pause</button>
+    <p class = "vertical"></p> 
+    <button onclick="resetStopWatch()" class="pauseWatch button">Reset</button>
   </div>
 
-  <p class="line"> </p>
-  <p> Hello </p>
+  <table style="width:100%">
+  <tr>
+    <th>Start Time</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+  </tr>
+  </table>
+  <script type="application/javascript" src="script.js"></script>
 </body>
