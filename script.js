@@ -19,7 +19,12 @@ var minutes = 0;
 var seconds = 0;
 var centiseconds = 0;
 
-
+/**
+ * Starts the timer when the start 
+ * button is clicked, and writes
+ * start time, latitude, and longitude
+ * to history table
+ */
 function startStopWatch() {
   if (!running) {
     startTime = new Date().getTime();
@@ -46,6 +51,13 @@ function startStopWatch() {
     saveToLocalStorage();
   }
 }
+
+/**
+ * Stops the timer when the stop 
+ * button is clicked, and writes
+ * stop time, latitude, longitude,
+ * and elapsed time to history table
+ */
 function pauseStopWatch() {
   if (running && !paused) {
     currentTime = new Date().getTime();
@@ -65,6 +77,11 @@ function pauseStopWatch() {
     saveToLocalStorage();
   }
 }
+
+/**
+ * Empties history table
+ * and resets timer and settings
+ */
 function resetStopWatch() {
   while (tableSize) {
     historyTable.deleteRow(1);
@@ -79,6 +96,10 @@ function resetStopWatch() {
   localStorage.clear();
 }
 
+/**
+ * Changes the time displayed on
+ * timer, format is hr:min:sec:centisec
+ */
 function getDisplayTime() {
   currentTime = new Date().getTime();
 
@@ -88,6 +109,9 @@ function getDisplayTime() {
     hours + ":" + minutes + ":" + seconds + ":" + centiseconds;
 }
 
+/**
+ * Gets the time elapsed for timer
+ */
 function getFormattedTime() {
   var difference = currentTime - startTime;
   hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -100,18 +124,31 @@ function getFormattedTime() {
   centiseconds = centiseconds < 10 ? "0" + centiseconds : centiseconds;
 }
 
+/**
+ * Gets current coordinates
+ * and puts them in the table
+ */
 function startCoor(pos) {
   startLatitude.innerHTML = pos.coords.latitude.toFixed(2);
   startLongitude.innerHTML = pos.coords.longitude.toFixed(2);
   saveToLocalStorage();
 }
 
+/**
+ * Gets current coordinates
+ * and puts them in the table
+ */
 function stopCoor(pos) {
   stopLatitude.innerHTML = pos.coords.latitude.toFixed(2);
   stopLongitude.innerHTML = pos.coords.longitude.toFixed(2);
   saveToLocalStorage();
 }
 
+/**
+ * Loads stored values from
+ * local storage for table
+ * and timer
+ */
 function loadFromLocalStorage() {
   startTime = Number(localStorage.getItem("startTime"));
   historyTable.innerHTML = localStorage.historyTable;
@@ -138,6 +175,11 @@ function loadFromLocalStorage() {
   }
 }
 
+/**
+ * Saves values into
+ * local storage for table
+ * and timer
+ */
 function saveToLocalStorage() {
   localStorage.setItem("startTime", startTime);
   localStorage.running = running;
@@ -148,6 +190,7 @@ function saveToLocalStorage() {
   localStorage.useStorage = 1;
 }
 
+//loads settings if they exist
 if(localStorage.getItem("useStorage")) {
   loadFromLocalStorage();  
 }
