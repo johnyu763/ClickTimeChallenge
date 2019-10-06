@@ -45,6 +45,7 @@ function startStopWatch() {
     running = 1;
     paused = 0;
   }
+  saveLocalStorage();
 }
 function pauseStopWatch() {
   if (running && !paused) {
@@ -63,6 +64,7 @@ function pauseStopWatch() {
     elapsedTime.innerHTML =
       hours + ":" + minutes + ":" + seconds + ":" + centiseconds;
   }
+  saveLocalStorage();
 }
 function resetStopWatch() {
   while (tableSize) {
@@ -75,6 +77,7 @@ function resetStopWatch() {
     running = 0;
     paused = 0;
   }
+  saveLocalStorage();
 }
 
 function getDisplayTime() {
@@ -106,4 +109,26 @@ function startCoor(pos) {
 function stopCoor(pos) {
   stopLatitude.innerHTML = pos.coords.latitude.toFixed(2);
   stopLongitude.innerHTML = pos.coords.longitude.toFixed(2);
+}
+function saveLocalStorage(){
+  if (storageAvailable('localStorage')) {
+    localStorage['startTime'] = startTime;
+    localStorage['historyTable'] = historyTable;
+    localStorage['running'] = running;
+    localStorage['paused'] = paused;
+    localStorage['useStorage'] = 1;
+  }
+}
+function loadLocalStorage(){
+  if (storageAvailable('localStorage')) {
+    startTime = Number(localStorage['startTime']);
+    historyTable.innerHTML = historyTable;
+    running = Number(localStorage['running']);
+    paused = Number(localStorage['paused'] = paused;)
+    if(running){
+      setInterval(getDisplayTime, 10);
+    }
+  }
+if(storageAvailable('localStorage') && Number(localStorage['useStorage'])){
+  loadLocalStorage();
 }
