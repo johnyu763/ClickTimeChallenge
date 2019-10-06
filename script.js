@@ -110,6 +110,7 @@ function stopCoor(pos) {
   stopLatitude.innerHTML = pos.coords.latitude.toFixed(2);
   stopLongitude.innerHTML = pos.coords.longitude.toFixed(2);
 }
+
 function saveLocalStorage(){
   if (storageAvailable('localStorage')) {
     localStorage['startTime'] = startTime;
@@ -124,7 +125,7 @@ function loadLocalStorage(){
     startTime = Number(localStorage['startTime']);
     historyTable.innerHTML = historyTable;
     running = Number(localStorage['running']);
-    paused = Number(localStorage['paused'] = paused;)
+    paused = Number(localStorage['paused'] = paused);
     if(running){
       setInterval(getDisplayTime, 10);
     }
