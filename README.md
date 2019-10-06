@@ -5,7 +5,7 @@ This is my implementation of The Race Around the World, which is question 1 of t
 
 Here's a video of its functionality.
 
-<img src="demo/clicktime.gif" title='RaceDemo' width='400px' alt='Video Demo' />
+<img src="demo/clicktime.gif" title='RaceDemo' width='750px' alt='Video Demo' />
 
 ## Notes
 
