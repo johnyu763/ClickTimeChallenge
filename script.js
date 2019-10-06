@@ -42,7 +42,6 @@ function startStopWatch() {
       startLongitude.innerHTML = "N/A";
     }
     timeInterval = setInterval(getDisplayTime, 10);
-
     running = 1;
     paused = 0;
   }
@@ -66,11 +65,16 @@ function pauseStopWatch() {
   }
 }
 function resetStopWatch() {
-  while(tableSize){
+  while (tableSize) {
     historyTable.deleteRow(1);
     tableSize--;
   }
-  
+  if (running || paused) {
+    clearInterval(timeInterval);
+    timeDisplay.innerHTML = "00:00:00:00";
+    running = 0;
+    paused = 0;
+  }
 }
 
 function getDisplayTime() {
